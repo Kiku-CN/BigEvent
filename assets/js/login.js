@@ -1,6 +1,4 @@
-// 接口文档地址：https://www.showdoc.com.cn/escook/3707158761215217
-// 大事件项目最新接口地址
-var APIhost = 'http://api-breakingnews-web.itheima.net';
+
 $(function () {
     // 登录和注册表单切换事件
     $('#toregister').on('click', function () {
@@ -21,10 +19,7 @@ $(function () {
             }
         }
     })
-    // 在发起 Ajax 请求之前，根据主机名拼接请求的根路径
-    $.ajaxPrefilter(function (options) {
-        options.url = APIhost + options.url;
-    });
+
 
     // 登录按钮事件
     $('.login').on('submit', function (e) {
@@ -39,7 +34,7 @@ $(function () {
                     return layer.msg(res.message);
                 }
                 layer.msg('登陆成功');
-                console.log(res);
+                localStorage.setItem('bigEventToken', res.token);
                 location.href = './index.html'
             }
         })
