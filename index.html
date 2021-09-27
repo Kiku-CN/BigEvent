@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>大事件后台 - Layui</title>
+    <title>大事件管理后台</title>
     <!--  -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
     <!-- 阿里字体图标文件 -->
@@ -23,14 +23,14 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item layui-hide layui-show-md-inline-block">
                     <a href="javascript:;" class="userinfo">
-                        <img src="./assets/images/avatar.jpg" class="layui-nav-img">
+                        <img src="./assets/images/avatar.jpg" class="layui-nav-img image-avatar">
                         <span class="text-avatar">A</span>
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">个人资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="./user/userinfo.html" target="layui-body">个人资料</a></dd>
+                        <dd><a href="./user/useravatar.html" target="layui-body">更换头像</a></dd>
+                        <dd><a href="./user/resetpassword.html" target="layui-body">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -47,7 +47,7 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
                     <div href="javascript:;" class="userinfo">
-                        <img src="./assets/images/avatar.jpg" class="layui-nav-img">
+                        <img src="./assets/images/avatar.jpg" class="layui-nav-img image-avatar">
                         <span class="text-avatar">A</span>
                         <i id="welcome"></i>
                     </div>
@@ -65,9 +65,9 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-about"></i>基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-camera"></i>更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-password"></i>重置密码</a></dd>
+                            <dd><a href="./user/userinfo.html" target="layui-body"><i class="layui-icon layui-icon-about"></i>基本资料</a></dd>
+                            <dd><a href="./user/useravatar.html" target="layui-body"><i class="layui-icon layui-icon-camera"></i>更换头像</a></dd>
+                            <dd><a href="./user/resetpassword.html" target="layui-body"><i class="layui-icon layui-icon-password"></i>重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>

@@ -1,4 +1,4 @@
-!function getUserinfo() {
+function getUserinfo() {
     $.ajax({
         url: '/my/userinfo',
         method: 'get',
@@ -9,7 +9,8 @@
             renderAvatar(res.data);
         }
     })
-}()
+}
+getUserinfo();
 // 渲染用户头像
 function renderAvatar(data) {
     // 如果用户设置了昵称优先使用昵称，否则使用账号名称
@@ -18,6 +19,7 @@ function renderAvatar(data) {
     $('#welcome').html(username + '，欢迎回来')
     // 如果用户设置了头像则隐藏文字头像，否则隐藏用户头像
     if (data.user_pic) {
+        $('.image-avatar').attr('src', data.user_pic)
         $('.userinfo span').hide();
     } else {
         $('.userinfo img').hide();
