@@ -49,13 +49,13 @@ $(function () {
             })
             .toDataURL('image/png') // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
         $.ajax({
-            method: 'post',
+            method: 'PATCH',
             url: '/my/update/avatar',
             data: {
                 avatar: avatarURL
             },
             success: function (res) {
-                if (res.status !== 0) {
+                if (res.code !== 0) {
                     layui.layer.msg('上传头像失败，请重试！')
                 }
                 layui.layer.msg('修改头像成功！')

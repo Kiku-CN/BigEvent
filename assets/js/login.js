@@ -30,7 +30,7 @@ $(function () {
             data: $(this).serialize(),
             success: function (res) {
                 // 返回状态码不为 0 直接返回失败信息
-                if (res.status !== 0) {
+                if (res.code !== 0) {
                     return layer.msg(res.message);
                 }
                 layer.msg('登陆成功');
@@ -48,7 +48,7 @@ $(function () {
             data: $(this).serialize(),
             success: function (res) {
                 // 返回状态码不为 0 直接返回失败信息
-                if (res.status !== 0) {
+                if (res.code !== 0) {
                     return layer.msg(res.message);
                 }
                 layer.msg('注册成功，请登录');

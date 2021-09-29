@@ -3,7 +3,7 @@ function getUserinfo() {
         url: '/my/userinfo',
         method: 'get',
         success: function (res) {
-            if (res.status !== 0) {
+            if (res.code !== 0) {
                 return layui.layer.msg('获取用户信息失败');
             }
             renderAvatar(res.data);
@@ -15,6 +15,7 @@ getUserinfo();
 function renderAvatar(data) {
     // 如果用户设置了昵称优先使用昵称，否则使用账号名称
     var username = data.nickname || data.username;
+    console.log('username:' + username);
     // 根据用户名设置欢迎词
     $('#welcome').html(username + '，欢迎回来')
     // 如果用户设置了头像则隐藏文字头像，否则隐藏用户头像

@@ -13,9 +13,9 @@ $(function () {
     function initUserinfo() {
         $.ajax({
             method: 'get',
-            url: '/my/userinfo/',
+            url: '/my/userinfo',
             success: function (res) {
-                if (res.status !== 0) {
+                if (res.code !== 0) {
                     layui.layer.msg('获取用户信息失败');
                 }
                 layui.form.val('userinfo', res.data);
@@ -39,7 +39,7 @@ $(function () {
             method: 'post',
             data: $(this).serialize(),
             success: function (res) {
-                if (res.status !== 0) {
+                if (res.code !== 0) {
                     return layui.layer.msg('修改用户信息失败！')
                 }
                 return layui.layer.msg('修改用户信息成功！')
